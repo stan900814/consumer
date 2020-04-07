@@ -11,6 +11,12 @@
 			"style":{
 				"navigationBarTitleText":"预约结果"
 			}
+		},
+		{
+			"path":"pages/index/rule",
+			"style":{
+				"navigationBarTitleText":"活动规则"
+			}
 		}
 	],
 	"globalStyle": {

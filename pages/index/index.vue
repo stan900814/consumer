@@ -1,23 +1,27 @@
 <template>
 	<view>
-		<view class="header padding">
-			<view class="text-df margin">
+		<view class="header padding bg-img">
+			<view class="text-df margin text-black ">
 				<text>成都市政府发福利啦</text>
 			</view>
-			<view class="text-lg margin">
+			<view class="text-lg margin ">
 				<text>礼享成都2000万优惠券</text>
 				
 			</view>
-			<view class="text-sm margin">
+			<view class="text-sm margin ">
 				<text>主板单位：成都市人民政府</text>
 				
 			</view>
-			<view class="text-xs margin">
+			<view class="text-xs margin ">
 				<text @tap="rule">活动规则 ></text>
 				
 			</view>
 		</view>
 		<view class="main">
+			<view class="" v-show="result">
+				结果公布时间
+				2020年04年08月10：00
+			</view>
 			<view class="wrapper bg-white">
 			<text class="text-xsl text-red cuIcon-goods align-center text-center"></text>
 			<view class="">
@@ -37,7 +41,7 @@
 			</view>
 			</view>
 			<view class="wrapper bg-white">
-			<text class=" text-red cuIcon-goods align-center text-center"></text>
+			<text class=" text-red cuIcon-goods align-center text-center" ></text>
 			<view class="">
 				<text>零售消费券</text>
 			</view>
@@ -68,7 +72,7 @@
 	export default {
 		data() {
 			return {
-				result:false
+				result:false,
 			}
 		},
 		onLoad() {
@@ -86,7 +90,11 @@
 					}
 				})
 			},
-			rule(){},
+			rule(){
+				uni.navigateTo({
+					url:'./rule'
+				})
+			},
 			getResult(){
 				uni.navigateTo({
 					url:'../result'
@@ -99,7 +107,7 @@
 <style scoped lang="scss">
 	.header{
 		height: 30vh;
-		// background-image: url();
+		background-image: url(http://img3.imgtn.bdimg.com/it/u=4263187928,1504546367&fm=26&gp=0.jpg);
 	}
 	.margin{
 		margin: 30rpx 20rpx;
