@@ -60,10 +60,10 @@
 			</view>
 		</view>
 		<view class="getVolume cu-btn" v-if="!result">
-			<button @tap="getVolume">报名预约</button>
+			<button class="cu-btn bg-red  lg shadow" @tap="getVolume">报名预约</button>
 		</view>
 		<view v-else class="getResult cu-btn">
-			<button @tap="getResult">获取预约结果</button>
+			<button class="cu-btn bg-red  lg shadow" @tap="getResult">获取预约结果</button>
 		</view>
 	</view>
 </template>
@@ -132,7 +132,7 @@
 		position: fixed;
 		left:0;
 		right: 0;
-		bottom:0;
+		bottom:10rpx;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -141,7 +141,7 @@
 		position: fixed;
 		left:0;
 		right: 0;
-		bottom:0;
+		bottom:10rpx;
 		position: fixed;
 		display: flex;
 		align-items: center;
