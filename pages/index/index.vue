@@ -80,15 +80,20 @@
 		},
 		methods: {
 			getVolume(){
-				let _this = this
-				uni.showToast({
-					icon:'success',
-					title:'预约成功',
-					duration:1500,
-					success:function(){
-						_this.result = true
-					}
-				})
+				if(){
+					
+				}else{
+					let _this = this
+					uni.showToast({
+						icon:'success',
+						title:'预约成功',
+						duration:1500,
+						success:function(){
+							_this.result = true
+						}
+					})
+				}
+
 			},
 			rule(){
 				uni.navigateTo({
