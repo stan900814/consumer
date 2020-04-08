@@ -1,26 +1,26 @@
 <template>
 	<view>
 		<view class="header padding bg-img">
-			<view class="text-df margin text-black ">
+			<view class="text-df margin text-black text-bold ">
 				<text>成都市政府发福利啦</text>
 			</view>
-			<view class="text-lg margin ">
+			<view class="text-lg margin text-bold ">
 				<text>礼享成都2000万优惠券</text>
 				
 			</view>
-			<view class="text-sm margin ">
+			<view class="text-sm margin text-bold ">
 				<text>主板单位：成都市人民政府</text>
 				
 			</view>
-			<view class="text-xs margin ">
+			<view class="text-xs margin text-bold ">
 				<text @tap="rule">活动规则 ></text>
 				
 			</view>
 		</view>
 		<view class="main">
-			<view class="" v-show="result">
-				结果公布时间
-				2020年04年08月10：00
+			<view class="text-center" v-show="result">
+				<text >结果公布时间</text>
+				<text >2020年04年08月10：00</text>
 			</view>
 			<view class="wrapper bg-white">
 			<text class="text-xsl text-red cuIcon-goods align-center text-center"></text>
@@ -51,7 +51,7 @@
 			</view>
 			<view class="wrapper bg-white">
 			<text class=" text-red cuIcon-goods align-center text-center"></text>
-			<view class="">
+			<view class="" style="margin-top:20rpx ;">
 				<text>零售消费券</text>
 			</view>
 			<view class="">
@@ -73,17 +73,18 @@
 		data() {
 			return {
 				result:false,
+				isLogin:true
 			}
 		},
 		onLoad() {
-
+				
 		},
-		methods: {
+		methods:{
 			getVolume(){
-				if(){
-					
-				}else{
-					let _this = this
+				//判断登录状态
+				let _this = this
+				if(_this.isLogin === false ){
+				}else{ 						
 					uni.showToast({
 						icon:'success',
 						title:'预约成功',
@@ -104,6 +105,9 @@
 				uni.navigateTo({
 					url:'../result'
 				})
+			},
+			login(){
+				
 			}
 		}
 	}
