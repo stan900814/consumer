@@ -140,14 +140,11 @@
 					url:'../result'
 				})
 			},
-			login(){
-				
-			}
 		}
 	}
 </script>
 
-<style scoped lang="scss">
+<style scoped >
 	.header{
 		height: 30vh;
 		background-image: url(http://img3.imgtn.bdimg.com/it/u=4263187928,1504546367&fm=26&gp=0.jpg);
