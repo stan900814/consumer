@@ -17,11 +17,16 @@
 				
 			</view>
 		</view>
-		<view class="main">
-			<view class="text-center" v-show="result">
+		<view class="text-center" v-show="result">
+			<view>
 				<text >结果公布时间</text>
-				<text >2020年04年08月10：00</text>
 			</view>
+			<view >
+				<text>{{formattime}}</text>	
+			</view>
+		</view>
+		<view class="main">
+
 			<view class="wrapper bg-white">
 			<text class="text-xsl text-red cuIcon-goods align-center text-center"></text>
 			<view class="">
@@ -69,11 +74,18 @@
 </template>
 
 <script>
+	import {formatDate} from '../../untils/time.js'
 	export default {
 		data() {
 			return {
 				result:false,
-				isLogin:true
+				isLogin:true,
+			}
+		},
+		computed:{
+			formattime:function(){
+				let date = new Date()
+				return date
 			}
 		},
 		onLoad() {
