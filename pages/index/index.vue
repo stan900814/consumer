@@ -90,8 +90,8 @@
 		},
 		onLoad() {
 			uni.showModal({
-				title:'微信小程序需要获取您授权获取信息',
-				content:'请授权',
+				title:'微信小程序申请获取您授权登录信息',
+				content:'',
 				showCancel:true,
 				cancelText:'拒绝',
 				confirmText:'允许',
