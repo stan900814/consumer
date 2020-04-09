@@ -37,7 +37,7 @@
 				<text>零售消费券</text>
 			</view>
 			<view class="">
-				<text>满100减20</text>
+				<text>满200减50</text>
 			</view>
 			</view>
 			<view class="wrapper bg-white">
@@ -46,16 +46,16 @@
 				<text>零售消费券</text>
 			</view>
 			<view class="">
-				<text>满100减20</text>
+				<text>满500减80</text>
 			</view>
 			</view>
 			<view class="wrapper bg-white">
 			<text class=" text-red cuIcon-goods align-center text-center"></text>
-			<view class="" style="margin-top:20rpx ;">
+			<view class="">
 				<text>零售消费券</text>
 			</view>
 			<view class="">
-				<text>满100减20</text>
+				<text>满1000减100</text>
 			</view>
 			</view>
 		</view>
@@ -77,18 +77,52 @@
 			}
 		},
 		onLoad() {
-				
+			uni.showModal({
+				title:'微信小程序需要获取您授权获取信息',
+				content:'请授权',
+				showCancel:true,
+				cancelText:'拒绝',
+				confirmText:'允许',
+				success(res) {
+					if(res.confirm)
+						uni.login({
+							provider:"weixin",
+							success() {
+								uni.showToast({
+									title:"登录成功",
+									icon:"success",
+								})
+							}
+						})
+				}
+			})
+				// uni.login({
+				// 	provider:"weixin",
+				// 	success:function(res){
+				// 		let userInfo = res
+				// 		uni.showToast({
+				// 			title:'登录成功',
+				// 			icon:"none",			
+				// 			success:function(data){
+				// 				uni.setStorage({
+				// 					key:'userInfo',
+				// 					data:userInfo
+				// 				})
+				// 			}
+				// 		})
+				// 	}
+				// })
 		},
 		methods:{
 			getVolume(){
 				//判断登录状态
 				let _this = this
 				if(_this.isLogin === false ){
+					
 				}else{ 						
 					uni.showToast({
 						icon:'success',
 						title:'预约成功',
-						duration:1500,
 						success:function(){
 							_this.result = true
 						}

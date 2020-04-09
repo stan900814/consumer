@@ -17,6 +17,12 @@
 			"style":{
 				"navigationBarTitleText":"活动规则"
 			}
+		},
+		{
+			"path":"pages/vouInof",
+			"style":{
+				"navigationBarTitleText":"使用消费券"
+			}
 		}
 	],
 	"globalStyle": {
